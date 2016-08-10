@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="div_worktype" ctype="select_list" level="4" ftype="field" fieldname="WorkType">
+        <select style="width:100px;" id="sel_workdtype_1" level="4" onchange="selectchange(this,'',true)" field="" name="select_list"></select>
+        <select style="display:none;" id="sel_workdtype_2" field="" name="select_list" level="4" onchange="selectchange(this, '', true)"></select>
+        <select style="display: none;" id="sel_workdtype_3" field="" name="select_list" level="4" onchange="selectchange(this, '', true)"></select>
+        <select style=" display: none;" id="sel_workdtype_4" field="" name="select_list" level="4" onchange="selectchange(this, '', true)"></select>
+    </div>
+    <script src="../../js/jquery/jquery-1.11.2.js"></script>
+
+    <script src="../../js/json2.js"></script>
+    <script>
+        var BlogTypes;
+        $().ready(function () {
+            var obj = new Object();
+            //obj.wid = id;
+            var parm = JSON2.stringify(obj);
+            
+            $.ajax({
+                type:"POST",
+ contentType: "application/json",
+                url: "../AjaxService/AjaxWebService.asmx/GetBlogType",
+                data: {},
+dataType:'json',
+                success: function (result) {
+                    //console.log("===type===" + result.d);
+                    var BlogTypes = result.getElementsByTagName("blogtypenotb");
+                    $.each(BlogTypes, function (i, item) {
+                        if (item.ParentId == null) {
+                            var aa = "<option value='"+ item.Id +"'>"+ item.Type +"</option>";
+                            $('#sel_workdtype_1').append(aa);
+                        }
+
+                    });
+                },
+                error: function () {
+                    alert("update  failed!");
+                }
+            });
+
+        });
+
+        function strToJson(str) {
+            var regR = /[\r]/g;
+            var regN = /[\n]/g;
+            var str1 = str.replace(regN, "");
+            str1 = str1.replace(regR, "");
+            var json = eval('(' + str1 + ')');
+            return json;
+        }
+    </script>
+
+    <script src="../../js/common/Blog.Data.js"></script>
+
+</body>
+</html>

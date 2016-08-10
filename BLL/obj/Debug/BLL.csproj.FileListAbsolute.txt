@@ -1,0 +1,14 @@
+E:\vs2013Project\Blog\BLL\bin\BLL.dll.config
+E:\vs2013Project\Blog\BLL\bin\BLL.dll
+E:\vs2013Project\Blog\BLL\bin\BLL.pdb
+E:\vs2013Project\Blog\BLL\bin\DAL.dll
+E:\vs2013Project\Blog\BLL\bin\Model.dll
+E:\vs2013Project\Blog\BLL\bin\FrameWork.dll
+E:\vs2013Project\Blog\BLL\bin\DAL.pdb
+E:\vs2013Project\Blog\BLL\bin\Model.pdb
+E:\vs2013Project\Blog\BLL\obj\Debug\BLL.dll
+E:\vs2013Project\Blog\BLL\obj\Debug\BLL.pdb
+E:\vs2013Project\Blog\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+E:\vs2013Project\Blog\BLL\bin\LinkCrm.Common.dll
+E:\vs2013Project\Blog\BLL\bin\DBUtility.dll
+E:\vs2013Project\Blog\BLL\bin\DBUtility.pdb

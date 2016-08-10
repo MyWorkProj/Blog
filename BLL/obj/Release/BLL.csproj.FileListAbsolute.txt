@@ -1,0 +1,14 @@
+E:\vs2013Project\angularJSProj\BLL\bin\BLL.dll.config
+E:\vs2013Project\angularJSProj\BLL\bin\BLL.dll
+E:\vs2013Project\angularJSProj\BLL\bin\BLL.pdb
+E:\vs2013Project\angularJSProj\BLL\bin\DAL.dll
+E:\vs2013Project\angularJSProj\BLL\bin\LinkCrm.Common.dll
+E:\vs2013Project\angularJSProj\BLL\bin\Model.dll
+E:\vs2013Project\angularJSProj\BLL\bin\DBUtility.dll
+E:\vs2013Project\angularJSProj\BLL\bin\FrameWork.dll
+E:\vs2013Project\angularJSProj\BLL\bin\DAL.pdb
+E:\vs2013Project\angularJSProj\BLL\bin\Model.pdb
+E:\vs2013Project\angularJSProj\BLL\bin\DBUtility.pdb
+E:\vs2013Project\angularJSProj\BLL\obj\Release\BLL.csprojResolveAssemblyReference.cache
+E:\vs2013Project\angularJSProj\BLL\obj\Release\BLL.dll
+E:\vs2013Project\angularJSProj\BLL\obj\Release\BLL.pdb

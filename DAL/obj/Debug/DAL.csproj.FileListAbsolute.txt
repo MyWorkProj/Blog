@@ -1,0 +1,11 @@
+E:\vs2013Project\Blog\DAL\bin\DAL.dll.config
+E:\vs2013Project\Blog\DAL\bin\DAL.dll
+E:\vs2013Project\Blog\DAL\bin\DAL.pdb
+E:\vs2013Project\Blog\DAL\bin\DBUtility.dll
+E:\vs2013Project\Blog\DAL\bin\Model.dll
+E:\vs2013Project\Blog\DAL\bin\FrameWork.dll
+E:\vs2013Project\Blog\DAL\bin\DBUtility.pdb
+E:\vs2013Project\Blog\DAL\bin\Model.pdb
+E:\vs2013Project\Blog\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+E:\vs2013Project\Blog\DAL\obj\Debug\DAL.dll
+E:\vs2013Project\Blog\DAL\obj\Debug\DAL.pdb

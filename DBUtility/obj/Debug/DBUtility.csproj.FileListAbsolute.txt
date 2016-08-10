@@ -1,0 +1,6 @@
+E:\vs2013Project\Blog\DBUtility\bin\DBUtility.dll.config
+E:\vs2013Project\Blog\DBUtility\bin\DBUtility.dll
+E:\vs2013Project\Blog\DBUtility\bin\DBUtility.pdb
+E:\vs2013Project\Blog\DBUtility\obj\Debug\DBUtility.dll
+E:\vs2013Project\Blog\DBUtility\obj\Debug\DBUtility.pdb
+E:\vs2013Project\Blog\DBUtility\bin\FrameWork.dll
