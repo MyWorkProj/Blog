@@ -11,16 +11,24 @@ using LTP.Accounts.Bus;
 using System.Text.RegularExpressions;
 using System.Web.Services;
 using Blog.Common;
+using Blog.IServices;
+using Blog.Common.EnumType;
+using Blog.Services;
+using System.Reflection;
 
 namespace angularJSProj.blog.main.bloginfotb
 {
     public partial class List : System.Web.UI.Page
     {
-
         BlogSpace.BLL.Blog.bloginfotb bll = new BlogSpace.BLL.Blog.bloginfotb();
+        public static readonly log4net.ILog loginfo = log4net.LogManager.GetLogger("loginfo");
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            // 写日志
+            loginfo.Info("========1=============");
+
+            //LOG.Log(LogType.Message, "当前时间:" + System.DateTime.Now + "======测试2==============");
             //if (!Page.IsPostBack)
             //{
             //    gridView.BorderColor = ColorTranslator.FromHtml("Blue");
