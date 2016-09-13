@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+
+    <script src="../../js/jquery-1.6.4.min.js"></script>
+</head>
+<body>
+    <div>
+        <table id="Repeater1" cellspacing="0" border="0" style="border-collapse:collapse;">
+            <tr>
+                <td>
+                    <span name="cbxbc">
+                    <input id="Repeater1_ctl00_cbxbc" type="checkbox" name="Repeater1$ctl00$cbxbc" /><label for="Repeater1_ctl00_cbxbc">111111111</label></span>
+                </td>
+                <td>
+                    <span name="cbxbc"><input id="Repeater1_ctl01_cbxbc" type="checkbox" name="Repeater1$ctl01$cbxbc" /><label for="Repeater1_ctl01_cbxbc">11120160905135422</label></span>
+                </td>
+                <td>
+                    <span name="cbxbc"><input id="Repeater1_ctl02_cbxbc" type="checkbox" name="Repeater1$ctl02$cbxbc" /><label for="Repeater1_ctl02_cbxbc">222220160905135437</label></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span name="cbxbc"><input id="Repeater1_ctl03_cbxbc" type="checkbox" name="Repeater1$ctl03$cbxbc" /><label for="Repeater1_ctl03_cbxbc">333320160905152501</label></span>
+                </td>
+                <td>
+                    <span name="cbxbc"><input id="Repeater1_ctl04_cbxbc" type="checkbox" name="Repeater1$ctl04$cbxbc" checked="checked"/><label for="Repeater1_ctl04_cbxbc">44444420160905152518</label></span>
+                </td>
+                <td></td>
+            </tr>
+        </table>
+        <label>===============1===============</label>
+        <div  id="aaa">1  4</div>
+        <label>====================444==========</label>
+        <div>
+            l1
+            l2
+            l3
+            l4
+            <div>
+                r1
+                r2
+                r3
+                r4
+            </div>
+        </div>
+    </div>
+    <script>
+        $().ready(function () {
+            //alert("=1==1=");
+            console.log("="+$("#aaa").text()+"=");
+
+            $("#Repeater1").find('input').each(function (i, item) {
+                if (item.checked == true) 
+                {
+                    console.log("==checked==" + item.nextSibling.innerHTML);
+                } else {
+                    console.log("===unchecked===" + item.nextSibling.innerHTML);
+                }
+            })
+        });
+    </script>
+        </body>
+        </html>
