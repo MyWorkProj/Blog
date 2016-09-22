@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Web;
+using System.Web.Http;
 using System.Web.Services;
 
 namespace Blog.main
@@ -18,7 +19,8 @@ namespace Blog.main
     [System.Web.Script.Services.ScriptService]
     public class AjaxWebService : System.Web.Services.WebService
     {
-
+        BlogSpace.BLL.Blog.blogtypenotb typeBll = new BlogSpace.BLL.Blog.blogtypenotb();
+        BlogSpace.BLL.Blog.bloginfotb infoBll = new BlogSpace.BLL.Blog.bloginfotb();
         [WebMethod]
         public string HelloWorld()
         {
@@ -28,29 +30,24 @@ namespace Blog.main
         [WebMethod]
         public int GetAllCount()
         {
-            BlogSpace.BLL.Blog.bloginfotb bll = new BlogSpace.BLL.Blog.bloginfotb();
-            DataSet ds = bll.GetAllList();
+            DataSet ds = infoBll.GetAllList();
             return ds.Tables[0].Rows.Count;
         }
 
         [WebMethod]
         public List<BlogSpace.Model.Blog.bloginfotb> GetListStrWhere(string strWhere)
         {
-            BlogSpace.BLL.Blog.bloginfotb bll = new BlogSpace.BLL.Blog.bloginfotb();
-
             List<BlogSpace.Model.Blog.bloginfotb> list = new List<BlogSpace.Model.Blog.bloginfotb>();
-            DataSet ds = bll.GetList(strWhere);
-            list = bll.DataTableToList(ds.Tables[0]);
+            DataSet ds = infoBll.GetList(strWhere);
+            list = infoBll.DataTableToList(ds.Tables[0]);
             return list;
         }
 
         [WebMethod]
         public List<BlogSpace.Model.Blog.bloginfotb> GetListByPage(string strWhere, string orderby, int startIndex, int length)
         {
-            BlogSpace.BLL.Blog.bloginfotb bll = new BlogSpace.BLL.Blog.bloginfotb();
-
             List<BlogSpace.Model.Blog.bloginfotb> list = new List<BlogSpace.Model.Blog.bloginfotb>();
-            DataSet ds = bll.GetListByPage(strWhere, orderby, startIndex, length);
+            DataSet ds = infoBll.GetListByPage(strWhere, orderby, startIndex, length);
             //for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
             //{
             //    BlogSpace.Model.Blog.bloginfotb model = new BlogSpace.Model.Blog.bloginfotb();
@@ -62,7 +59,7 @@ namespace Blog.main
 
             //    list.Add(model);
             //}
-            list = bll.DataTableToList(ds.Tables[0]);
+            list = infoBll.DataTableToList(ds.Tables[0]);
             return list;
         }
 
@@ -95,13 +92,65 @@ namespace Blog.main
             //return list2;
 
 
-            BlogSpace.BLL.Blog.blogtypenotb bll = new BlogSpace.BLL.Blog.blogtypenotb();
-            DataSet ds = bll.GetList("");
+            
+            DataSet ds = typeBll.GetList("");
 
-            List<BlogSpace.Model.Blog.blogtypenotb> list = bll.DataTableToList(ds.Tables[0]);
+            List<BlogSpace.Model.Blog.blogtypenotb> list = typeBll.DataTableToList(ds.Tables[0]);
             //return list;
             return Newtonsoft.Json.JsonConvert.SerializeObject(list);
         }
 
+
+        [WebMethod]
+        public string GetStatisticData() 
+        {
+            List<BlogSpace.Model.Blog.bloginfotb> list1 = infoBll.GetModelList(" 1=1 group by mark ");
+
+            List<BlogSpace.Model.Blog.bloginfotb> list = infoBll.GetModelList("");
+            foreach (var item in list)
+            {
+                item.month = GetMonth((DateTime)item.CreateDate);
+            }
+            StatisticDataModel model = new StatisticDataModel();
+
+            string[] mark = {"","11","aa","bb"};
+            for (int j = 1; j < 4; j++)
+			{
+                string  markValue = mark[j];
+                int[] array = new int[13];
+			    for (int i = 1; i <= 12; i++)
+                {
+                    var aa = from c in list
+                             where c.month == i.ToString() && c.Mark == markValue
+                             select c;
+                    array[i] = aa.Count();
+                }
+                switch(j){
+                    case 1: model.mark1 = array;
+                        break;
+                    case 2: model.mark2 = array;
+                        break;
+                    case 3: model.mark3 = array;
+                        break;
+                    default:model.mark4 = array;
+                        break;
+                }
+                
+			}
+            return Newtonsoft.Json.JsonConvert.SerializeObject(model);
+        }
+
+        public string GetMonth(DateTime dt)
+        {
+            string month = dt.Month.ToString();
+            return month;
+        }
+    }
+    public class StatisticDataModel
+    {
+        public Array mark1 { get; set; }
+        public Array mark2 { get; set; }
+        public Array mark3 { get; set; }
+        public Array mark4 { get; set; }
     }
 }
