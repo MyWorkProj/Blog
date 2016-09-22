@@ -82,6 +82,7 @@ namespace BlogSpace.Model.Blog
 		}
 
         public string CDate { get; set; }
+        public string month { get; set; }
 		#endregion Model
 
 	}
