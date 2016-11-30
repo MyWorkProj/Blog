@@ -47,6 +47,9 @@
             </div>
         </div>
     </div>
+
+    <input id="btnClose" type="button" value="关闭当前页面" />
+
     <script>
         $().ready(function () {
             //alert("=1==1=");
@@ -60,6 +63,11 @@
                     console.log("===unchecked===" + item.nextSibling.innerHTML);
                 }
             })
+
+            $("#btnClose").click(function () {
+                console.log("===close this web=====");
+                window.close();
+            });
         });
     </script>
         </body>
