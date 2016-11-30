@@ -1,6 +1,6 @@
-E:\vs2013Project\Blog\Model\bin\Model.dll.config
-E:\vs2013Project\Blog\Model\bin\Model.dll
-E:\vs2013Project\Blog\Model\bin\Model.pdb
-E:\vs2013Project\Blog\Model\obj\Debug\Model.dll
-E:\vs2013Project\Blog\Model\obj\Debug\Model.pdb
-E:\vs2013Project\Blog\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+E:\vs2013Project\Blog\trunk\Model\bin\Model.dll.config
+E:\vs2013Project\Blog\trunk\Model\bin\Model.dll
+E:\vs2013Project\Blog\trunk\Model\bin\Model.pdb
+E:\vs2013Project\Blog\trunk\Model\obj\Debug\Model.dll
+E:\vs2013Project\Blog\trunk\Model\obj\Debug\Model.pdb
+E:\vs2013Project\Blog\trunk\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache

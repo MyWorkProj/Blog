@@ -1,6 +1,7 @@
-E:\vs2013Project\Blog\DBUtility\bin\DBUtility.dll.config
-E:\vs2013Project\Blog\DBUtility\bin\DBUtility.dll
-E:\vs2013Project\Blog\DBUtility\bin\DBUtility.pdb
-E:\vs2013Project\Blog\DBUtility\obj\Debug\DBUtility.dll
-E:\vs2013Project\Blog\DBUtility\obj\Debug\DBUtility.pdb
-E:\vs2013Project\Blog\DBUtility\bin\FrameWork.dll
+E:\vs2013Project\Blog\trunk\DBUtility\bin\DBUtility.dll.config
+E:\vs2013Project\Blog\trunk\DBUtility\bin\DBUtility.dll
+E:\vs2013Project\Blog\trunk\DBUtility\bin\DBUtility.pdb
+E:\vs2013Project\Blog\trunk\DBUtility\bin\FrameWork.dll
+E:\vs2013Project\Blog\trunk\DBUtility\obj\Debug\DBUtility.dll
+E:\vs2013Project\Blog\trunk\DBUtility\obj\Debug\DBUtility.pdb
+E:\vs2013Project\Blog\trunk\DBUtility\obj\Debug\DBUtility.csprojResolveAssemblyReference.cache
